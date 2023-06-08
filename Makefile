@@ -13,5 +13,8 @@ qsc.o: qsc.c
 qsc: qsc.o vec.o
 	gcc -o ./qsc ./qsc.o ./vec.o
 
+mgs: mgs.c
+	gcc -o ./mgs ./mgs.c
+
 clean:
 	rm *.o ./qsc ./vec_test

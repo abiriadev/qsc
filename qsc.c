@@ -30,11 +30,13 @@ void qs(int *arr, int len) {
 	printf("out: ");
 	print(&(Vec){0, len, arr});
 
+	printf("l: %d, r: %d\n", l, r);
+
 	if (r > 0)
 		qs(arr, r + 1);
 
 	if (l < len - 1)
-		qs(arr + l, len - r - 1);
+		qs(arr + r + 1, len - r - 1);
 }
 
 int main() {
